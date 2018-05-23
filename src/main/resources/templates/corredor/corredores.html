@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+    <h1>Lista de Corredores</h1>
+    <table>
+        <tr th:each="corredor : ${corredores}">
+            <td th:text="${corredor.nome}"></td>
+            <td th:text="${corredor.cpf}"></td>
+        </tr>
+    </table>
+    <a href="add">Adicionar</a>
+</body>
+</html>
